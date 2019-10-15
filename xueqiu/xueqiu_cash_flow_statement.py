@@ -25,11 +25,8 @@ def get_cfs_for_1_stock(str_stock_code):
         json_list = json_data['list']
         str_list=json.dumps(json_list)
         df = pd.read_json(str_list, orient='records')
-        df.to_excel(get_file_name(str_stock_code))
+        df.to_excel(xueqiu_base.get_file_name('../data/cfs/','cfs_',str_stock_code))
 
-
-def get_file_name(name):
-    return '../data/cfs/cfs_'+name+'.xlsx'
 
 
 

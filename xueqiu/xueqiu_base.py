@@ -98,3 +98,8 @@ def write_price_xls(  results,file_dir):
         newwb.save(file_name1)
 
 
+def get_file_name(path, prefix, name):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    return path + prefix + name + '.xlsx'
