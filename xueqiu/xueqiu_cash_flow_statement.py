@@ -29,9 +29,6 @@ def get_cfs_for_1_stock(str_stock_code):
 
 
 def get_file_name(name):
-    data_path = '../data/cfs'
-    if not os.path.exists(data_path):
-        os.makedirs(data_path)
     return '../data/cfs/cfs_'+name+'.xlsx'
 
 
