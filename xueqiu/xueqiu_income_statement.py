@@ -29,6 +29,9 @@ def getIncomeStatements(shOrSz,rangeStart,rangeEnd):
 
 
 def get_file_name(name):
+    data_path = '../data/is'
+    if not os.path.exists(data_path):
+        os.makedirs(data_path)
     return '../data/is/is_'+name+'.xlsx'
 
 def get_is_for_1_stock(str_stock_code):
