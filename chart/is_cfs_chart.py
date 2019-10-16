@@ -10,7 +10,7 @@ matplotlib.use('Agg')
 import industry
 import stock_reader
 import data_preprocessor
-
+matplotlib.use('tkagg')
 
 def draw_is_cfs_subplot(ax,df):
     width = 0.12
@@ -201,6 +201,7 @@ def draw_is_cfs_chart_for_stock(str_stock_code):
     fig, ax = plt.subplots(figsize=(20, 8))
     draw_is_cfs_subplot(ax,df_is_cfs)
     plt.show()
+   # fig.savefig('../data/is_cfs.png', bbox_inches='tight')
 
 
 if __name__ == "__main__":

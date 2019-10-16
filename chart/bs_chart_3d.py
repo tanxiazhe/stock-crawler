@@ -46,8 +46,8 @@ if __name__ == '__main__':
         width = 0.3
 
         name = df['name']
-        a = df['totasset']
-        ca = df['totcurrasset']
+        a = df['totalassets']
+        ca = df['totalcurrentassets']
         la = df['totalnoncassets']
         ind = np.arange(len(name))  # the x locations for the groups
         b = df['totliabsharequi']

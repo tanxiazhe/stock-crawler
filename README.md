@@ -8,7 +8,7 @@ run xueqiu/xueqiu_crawler.py
 run chart/bs_chart.py
 ![data](docs/pics/bs.PNG)
 ## 利润表和现金流量表
-run ana/is_cfs_chart.py
+run chart/is_cfs_chart.py
 ![data](docs/pics/is_cfs.PNG)
 - 先看利润，利润都不好看的基本面肯定不好
 - 看现金流量表，利润好看，但是经营现金流净额经常负一下的估计也不好

@@ -71,7 +71,7 @@ def draw_detailed_current_asset_bars(ax,position,width,curfds,tradfinasset,notes
     ax.bar(position + width, curfds, width, bottom=num_bottom,label='cash')
 
 # 非流动资产合计	特殊处理本身不平总资产	特殊处理格式不同总资产	资产总计	短期借款	交易性金融负债	应付票据	应付账款	预收款项	应付职工薪酬	应交税费	应付利息	应付股利	其他应交款	应付保证金	内部应付款	其他应付款	预提费用	预计流动负债	应付分保账款	国际票证结算	国内票证结算	一年内的递延收益	应付短期债券	一年内到期的非流动负债	其他流动负债	特殊处理本身不平流动负债	特殊处理格式不同流动负债	流动负债合计	长期借款	应付债券	长期应付款	专项应付款	预计非流动负债	长期递延收益	递延所得税负债	其他非流动负债	特殊处理本身不平长期负债	特殊处理格式不同长期负债	非流动负债合计	特殊处理本身不平负债合计	特殊处理格式不同负债合计	负债合计	实收资本(或股本)	资本公积	减：库存股	专项储备	盈余公积	一般风险准备	未确定的投资损失	未分配利润	拟分配现金股利	外币报表折算差额	特殊处理本身不平股东权益	特殊处理格式不同股东权益	归属于母公司股东权益合计	少数股东权益	特殊处理本身不平股东权益	特殊处理格式不平股东权益	所有者权益(或股东权益)合计	特殊处理本身不平负债及权益	特殊处理格式不同负债及权益	负债和所有者权益	结算备付金	拆出资金	衍生金融资产	应收分保账款	应收分保合同准备金	买入返售金融资产	向中央银行借款	吸收存款及同业存放	拆入资金	衍生金融负债	卖出回购金融资产款	应付手续费及佣金	保险合同准备金	代理买卖证券款	代理承销证券款
-# ,totalnoncassets	totassetitse	totalasseform	totasset
+# ,totalnoncassets	totalassetsitse	totalasseform	totalassets
 # 固定资产原值	累计折旧	固定资产净值	固定资产减值准备
 # fixedasseimmo	accudepr	fixedassenetw	fixedasseimpa
 def draw_detailed_long_term_asset_bars(ax,position,width,
@@ -192,164 +192,164 @@ def draw_bar(ax,position,series,width,num_bottom,str_label):
 def draw_bs_subplot(ax,df):
     width = 0.1
     t = df['reportdate']
-    a = df['totasset']
-    ca = df['totcurrasset']
-    curfds = df['curfds']
-
-    tradfinasset=df['tradfinasset']
-    notesrece = df['notesrece']
-    accorece = df['accorece']
-    prep = df['prep']
-    premrece = df['premrece']
-    interece = df['interece']
-    dividrece = df['dividrece']
-    otherrece = df['otherrece']
-    expotaxrebarece = df['expotaxrebarece']
-    subsrece = df['subsrece']
-    margrece = df['margrece']
-    intelrece = df['intelrece']
-    inve = df['inve']
-    prepexpe = df['prepexpe']
-    unseg = df['unseg']
-    expinoncurrasset = df['expinoncurrasset']
-    othercurrasse = df['othercurrasse']
-    currassetitse = df['currassetitse']
-    currasseform = df['currasseform']
-    totcurrasset = df['totcurrasset']
-    lendandloan = df['lendandloan']
-    avaisellasse = df['avaisellasse']
-    holdinvedue = df['holdinvedue']
-
-    la = df['totalnoncassets']
-    longrece = df['longrece']
-    equiinve = df['equiinve']
-    otherlonginve = df['otherlonginve']
-    inveprop = df['inveprop']
-    fixedassenet = df['fixedassenet']
-    consprog = df['consprog']
-    engimate = df['engimate']
-    fixedasseclea = df['fixedasseclea']
-    prodasse = df['prodasse']
-    comasse = df['comasse']
-    hydrasset = df['hydrasset']
-    intaasset = df['intaasset']
-    deveexpe = df['deveexpe']
-    goodwill = df['goodwill']
-    logprepexpe = df['logprepexpe']
-    tradshartrad = df['tradshartrad']
-    defetaxasset = df['defetaxasset']
-    othernoncasse = df['othernoncasse']
-    noncasseitse = df['noncasseitse']
-    noncasseform = df['noncasseform']
-
+    a = df['totalassets']
+    ca = df['totalcurrentassets']
+    # curfds = df['curfds']
+    #
+    # tradfinasset=df['tradfinasset']
+    # notesrece = df['notesrece']
+    # accorece = df['accorece']
+    # prep = df['prep']
+    # premrece = df['premrece']
+    # interece = df['interece']
+    # dividrece = df['dividrece']
+    # otherrece = df['otherrece']
+    # expotaxrebarece = df['expotaxrebarece']
+    # subsrece = df['subsrece']
+    # margrece = df['margrece']
+    # intelrece = df['intelrece']
+    # inve = df['inve']
+    # prepexpe = df['prepexpe']
+    # unseg = df['unseg']
+    # expinoncurrasset = df['expinoncurrasset']
+    # othercurrasse = df['othercurrasse']
+    # currassetitse = df['currassetitse']
+    # currasseform = df['currasseform']
+    # totalcurrentassets = df['totalcurrentassets']
+    # lendandloan = df['lendandloan']
+    # avaisellasse = df['avaisellasse']
+    # holdinvedue = df['holdinvedue']
+    #
+    la = df['totalnoncurrentassets']
+    # longrece = df['longrece']
+    # equiinve = df['equiinve']
+    # otherlonginve = df['otherlonginve']
+    # inveprop = df['inveprop']
+    # fixedassenet = df['fixedassenet']
+    # consprog = df['consprog']
+    # engimate = df['engimate']
+    # fixedasseclea = df['fixedasseclea']
+    # prodasse = df['prodasse']
+    # comasse = df['comasse']
+    # hydrasset = df['hydrasset']
+    # intaasset = df['intaasset']
+    # deveexpe = df['deveexpe']
+    # goodwill = df['goodwill']
+    # logprepexpe = df['logprepexpe']
+    # tradshartrad = df['tradshartrad']
+    # defetaxasset = df['defetaxasset']
+    # othernoncasse = df['othernoncasse']
+    # noncasseitse = df['noncasseitse']
+    # noncasseform = df['noncasseform']
+    #
     ind = np.arange(len(t))  # the x locations for the groups
-
-    b = df['totliabsharequi']
-    cl = df['totalcurrliab']
-    shorttermborr = df['shorttermborr']
-    tradfinliab = df['tradfinliab']
-    notespaya = df['notespaya']
-    accopaya = df['accopaya']
-    advapaym = df['advapaym']
-    copeworkersal = df['copeworkersal']
-    taxespaya = df['taxespaya']
-    intepaya = df['intepaya']
-    divipaya = df['divipaya']
-    otherfeepaya = df['otherfeepaya']
-    margrequ = df['margrequ']
-    intelpay = df['intelpay']
-    otherpay = df['otherpay']
-    accrexpe = df['accrexpe']
-    expecurrliab = df['expecurrliab']
-    copewithreinrece = df['copewithreinrece']
-    inteticksett = df['inteticksett']
-    dometicksett = df['dometicksett']
-    defereve = df['defereve']
-    shorttermbdspaya = df['shorttermbdspaya']
-    duenoncliab = df['duenoncliab']
-    othercurreliabi = df['othercurreliabi']
-    currliabitse = df['currliabitse']
-    currliabform = df['currliabform']
-
-    ll = df['totalnoncliab']
-    l = df['totliab']
-    e = df['righaggr']
-
-    longborr = df['longborr']
-    bdspaya = df['bdspaya']
-    longpaya = df['longpaya']
-    specpaya = df['specpaya']
-    expenoncliab = df['expenoncliab']
-    longdefeinco = df['longdefeinco']
-    defeincotaxliab = df['defeincotaxliab']
-    othernoncliabi = df['othernoncliabi']
-    longliabitse = df['longliabitse']
-    longliabform = df['longliabform']
-    totalnoncliab = df['totalnoncliab']
-    totliabitse = df['totliabitse']
-    totliabform = df['totliabform']
-    totliab = df['totliab']
-    paidincapi = df['paidincapi']
-    capisurp = df['capisurp']
-    treastk = df['treastk']
-    specrese = df['specrese']
-    rese = df['rese']
-    generiskrese = df['generiskrese']
-    unreinveloss = df['unreinveloss']
-    undiprof = df['undiprof']
-    topaycashdivi = df['topaycashdivi']
-    curtrandiff = df['curtrandiff']
-    sharrighitse = df['sharrighitse']
-    sharrightform = df['sharrightform']
-    paresharrigh = df['paresharrigh']
-    minysharrigh = df['minysharrigh']
-    righaggritse = df['righaggritse']
-    rightaggrform = df['rightaggrform']
-    righaggr = df['righaggr']
-    rightotitse = df['rightotitse']
-    rightotform = df['rightotform']
-    totliabsharequi = df['totliabsharequi']
-    settresedepo = df['settresedepo']
-    plac = df['plac']
-    derifinaasset = df['derifinaasset']
-    reinrece = df['reinrece']
-    reincontrese = df['reincontrese']
-    purcresaasset = df['purcresaasset']
-    cenbankborr = df['cenbankborr']
-    deposit = df['deposit']
-    fdsborr = df['fdsborr']
-    deriliab = df['deriliab']
-    sellrepasse = df['sellrepasse']
-    copepoun = df['copepoun']
-    insucontrese = df['insucontrese']
-    actitradsecu = df['actitradsecu']
-    actiundesecu = df['actiundesecu']
+    #
+    # b = df['totliabsharequi']
+    cl = df['totalcurrentliab']
+    # shorttermborr = df['shorttermborr']
+    # tradfinliab = df['tradfinliab']
+    # notespaya = df['notespaya']
+    # accopaya = df['accopaya']
+    # advapaym = df['advapaym']
+    # copeworkersal = df['copeworkersal']
+    # taxespaya = df['taxespaya']
+    # intepaya = df['intepaya']
+    # divipaya = df['divipaya']
+    # otherfeepaya = df['otherfeepaya']
+    # margrequ = df['margrequ']
+    # intelpay = df['intelpay']
+    # otherpay = df['otherpay']
+    # accrexpe = df['accrexpe']
+    # expecurrliab = df['expecurrliab']
+    # copewithreinrece = df['copewithreinrece']
+    # inteticksett = df['inteticksett']
+    # dometicksett = df['dometicksett']
+    # defereve = df['defereve']
+    # shorttermbdspaya = df['shorttermbdspaya']
+    # duenoncliab = df['duenoncliab']
+    # othercurreliabi = df['othercurreliabi']
+    # currliabitse = df['currliabitse']
+    # currliabform = df['currliabform']
+    #
+    ll = df['totalnoncurrentliab']
+    # l = df['totliab']
+    e = df['totalquityatsopc']
+    #
+    # longborr = df['longborr']
+    # bdspaya = df['bdspaya']
+    # longpaya = df['longpaya']
+    # specpaya = df['specpaya']
+    # expenoncliab = df['expenoncliab']
+    # longdefeinco = df['longdefeinco']
+    # defeincotaxliab = df['defeincotaxliab']
+    # othernoncliabi = df['othernoncliabi']
+    # longliabitse = df['longliabitse']
+    # longliabform = df['longliabform']
+    # totalnoncliab = df['totalnoncliab']
+    # totliabitse = df['totliabitse']
+    # totliabform = df['totliabform']
+    # totliab = df['totliab']
+    # paidincapi = df['paidincapi']
+    # capisurp = df['capisurp']
+    # treastk = df['treastk']
+    # specrese = df['specrese']
+    # rese = df['rese']
+    # generiskrese = df['generiskrese']
+    # unreinveloss = df['unreinveloss']
+    # undiprof = df['undiprof']
+    # topaycashdivi = df['topaycashdivi']
+    # curtrandiff = df['curtrandiff']
+    # sharrighitse = df['sharrighitse']
+    # sharrightform = df['sharrightform']
+    # paresharrigh = df['paresharrigh']
+    # minysharrigh = df['minysharrigh']
+    # righaggritse = df['righaggritse']
+    # rightaggrform = df['rightaggrform']
+    # righaggr = df['righaggr']
+    # rightotitse = df['rightotitse']
+    # rightotform = df['rightotform']
+    # totliabsharequi = df['totliabsharequi']
+    # settresedepo = df['settresedepo']
+    # plac = df['plac']
+    # derifinaasset = df['derifinaasset']
+    # reinrece = df['reinrece']
+    # reincontrese = df['reincontrese']
+    # purcresaasset = df['purcresaasset']
+    # cenbankborr = df['cenbankborr']
+    # deposit = df['deposit']
+    # fdsborr = df['fdsborr']
+    # deriliab = df['deriliab']
+    # sellrepasse = df['sellrepasse']
+    # copepoun = df['copepoun']
+    # insucontrese = df['insucontrese']
+    # actitradsecu = df['actitradsecu']
+    # actiundesecu = df['actiundesecu']
 
     draw_bs_bars(ax,ind,width,ca,la,cl,ll,e)
-    draw_detailed_current_asset_bars(ax,ind-2*width,width,curfds, tradfinasset, notesrece, accorece, prep,
-    premrece, interece, dividrece, otherrece, expotaxrebarece, subsrece,
-    margrece, intelrece, inve, prepexpe, unseg, expinoncurrasset, othercurrasse,
-    currassetitse, currasseform, la)
-
-    draw_detailed_long_term_asset_bars(ax, ind-width, width,
-                                       lendandloan, avaisellasse, holdinvedue, longrece, equiinve, otherlonginve,
-                                       inveprop, fixedassenet, consprog, engimate, fixedasseclea, prodasse, comasse,
-                                       hydrasset, intaasset, deveexpe, goodwill, logprepexpe, tradshartrad,
-                                       defetaxasset, othernoncasse, noncasseitse, noncasseform)
-    draw_detailed_current_liability_bars(ax, ind+2*width, width,
-                                         shorttermborr, tradfinliab, notespaya, accopaya, advapaym, copeworkersal,
-                                         taxespaya, intepaya, divipaya, otherfeepaya, margrequ, intelpay, otherpay,
-                                         accrexpe,
-                                         expecurrliab, copewithreinrece, inteticksett, dometicksett, defereve,
-                                         shorttermbdspaya,
-                                         duenoncliab, othercurreliabi, currliabitse, currliabform, ll+e)
-    draw_detailed_long_term_liability_bars(ax, ind+2*width, width,
-                                           longborr, bdspaya, longpaya, specpaya, expenoncliab, longdefeinco,
-                                           defeincotaxliab, othernoncliabi, longliabitse, longliabform, e)
-    draw_detailed_equity_bars(ax, ind+2*width, width,
-                              paidincapi, capisurp, treastk, specrese, rese, generiskrese, unreinveloss, undiprof,
-                              topaycashdivi, curtrandiff, sharrighitse, sharrightform, paresharrigh, minysharrigh,
-                              righaggritse, rightaggrform)
+    # draw_detailed_current_asset_bars(ax,ind-2*width,width,curfds, tradfinasset, notesrece, accorece, prep,
+    # premrece, interece, dividrece, otherrece, expotaxrebarece, subsrece,
+    # margrece, intelrece, inve, prepexpe, unseg, expinoncurrasset, othercurrasse,
+    # currassetitse, currasseform, la)
+    #
+    # draw_detailed_long_term_asset_bars(ax, ind-width, width,
+    #                                    lendandloan, avaisellasse, holdinvedue, longrece, equiinve, otherlonginve,
+    #                                    inveprop, fixedassenet, consprog, engimate, fixedasseclea, prodasse, comasse,
+    #                                    hydrasset, intaasset, deveexpe, goodwill, logprepexpe, tradshartrad,
+    #                                    defetaxasset, othernoncasse, noncasseitse, noncasseform)
+    # draw_detailed_current_liability_bars(ax, ind+2*width, width,
+    #                                      shorttermborr, tradfinliab, notespaya, accopaya, advapaym, copeworkersal,
+    #                                      taxespaya, intepaya, divipaya, otherfeepaya, margrequ, intelpay, otherpay,
+    #                                      accrexpe,
+    #                                      expecurrliab, copewithreinrece, inteticksett, dometicksett, defereve,
+    #                                      shorttermbdspaya,
+    #                                      duenoncliab, othercurreliabi, currliabitse, currliabform, ll+e)
+    # draw_detailed_long_term_liability_bars(ax, ind+2*width, width,
+    #                                        longborr, bdspaya, longpaya, specpaya, expenoncliab, longdefeinco,
+    #                                        defeincotaxliab, othernoncliabi, longliabitse, longliabform, e)
+    # draw_detailed_equity_bars(ax, ind+2*width, width,
+    #                           paidincapi, capisurp, treastk, specrese, rese, generiskrese, unreinveloss, undiprof,
+    #                           topaycashdivi, curtrandiff, sharrighitse, sharrightform, paresharrigh, minysharrigh,
+    #                           righaggritse, rightaggrform)
     ax.set_xticks(ind + width / 2)
     ax.set_xticklabels(t)
     for tick in ax.get_xticklabels():
@@ -360,8 +360,8 @@ def draw_industry_bs_subplot(ax,df):
     width=0.1
 
     name = df['stock_name']
-    a = df['totasset']
-    ca = df['totcurrasset']
+    a = df['totalassets']
+    ca = df['totalcurrentassets']
     la = df['totalnoncassets']
     ind = np.arange(len(name))  # the x locations for the groups
     b=df['totliabsharequi']
@@ -398,7 +398,7 @@ def draw_industry_bs_chart_for_date(str_industry,str_reportdate):
     dfo = pd.read_excel('../data/bs/bs_' + str_industry + '.xlsx', parse_dates=['reportdate'], date_parser=dateparse)
     df = dfo[dfo['reportdate'] == str_reportdate]
     df.fillna(0, inplace=True)
-    df = df.sort_values(by=['totasset'], ascending=False)
+    df = df.sort_values(by=['totalassets'], ascending=False)
     ax = fig.add_subplot(111)
     draw_industry_bs_subplot(ax, df)
 

@@ -62,8 +62,8 @@ def draw_industry_is_cfs_bs_subplot(ax,df,x):
 
     # bs vars
     t = df['reportdate']
-    a = df['totasset']
-    ca = df['totcurrasset']
+    a = df['totalassets']
+    ca = df['totalcurrentassets']
     la = df['totalnoncassets']
 
     b = df['totliabsharequi']

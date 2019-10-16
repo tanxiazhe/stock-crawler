@@ -1,8 +1,8 @@
 #-*-coding:utf-8 -*-
 
 
-from xueqiu import get_data
-from xueqiu import write_price_xls
+from xueqiu.xueqiu_base import get_data
+from xueqiu.xueqiu_base import write_price_xls
 
 if __name__ == "__main__":
     #SH 0-287-1779

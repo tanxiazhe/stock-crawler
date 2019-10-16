@@ -7,10 +7,10 @@ import xlrd
 import xlwt
 from xlutils.copy import copy
 import os
-from xueqiu import getHeaders
+from xueqiu.xueqiu_base import get_headers
 def getCompInfo(shOrSz,rangeStart,rangeEnd):
-    headers = getHeaders()
-    stockList = stock_reader.readStockList(shOrSz, rangeStart, rangeEnd)
+    headers = get_headers()
+    stockList = stock_reader.read_stock_list(shOrSz, rangeStart, rangeEnd)
     print(stockList)
 
 

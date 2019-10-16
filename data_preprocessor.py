@@ -52,9 +52,9 @@ def merge_industry_is_cfs_bs_match_begindate_bsdate(name):
 def calc_profit_ability(name):
     df_is_cfs_bs_begin = pd.read_excel('../data/is_cfs_bs_begin_' + name + '.xlsx', converters={'reportdate': str})
     df_is_cfs_bs_begin['roe'] = df_is_cfs_bs_begin['netprofit_is']/df_is_cfs_bs_begin['righaggr']
-    df_is_cfs_bs_begin['roa'] = df_is_cfs_bs_begin['netprofit_is']/df_is_cfs_bs_begin['totasset']
+    df_is_cfs_bs_begin['roa'] = df_is_cfs_bs_begin['netprofit_is']/df_is_cfs_bs_begin['totalassets']
     df_is_cfs_bs_begin['ni_div_sr'] = df_is_cfs_bs_begin['netprofit_is']/df_is_cfs_bs_begin['biztotinco']
-    df_is_cfs_bs_begin['sr_div_a'] = df_is_cfs_bs_begin['biztotinco']/df_is_cfs_bs_begin['totasset']
+    df_is_cfs_bs_begin['sr_div_a'] = df_is_cfs_bs_begin['biztotinco']/df_is_cfs_bs_begin['totalassets']
     df_is_cfs_bs_begin.to_excel('../data/is_cfs_bs_begin_'+name+'.xlsx')
 
 

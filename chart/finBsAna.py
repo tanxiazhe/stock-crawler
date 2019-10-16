@@ -14,8 +14,8 @@ if __name__ == "__main__":
     df = dfo[dfo['code']=='SH600036']
     df.fillna(0, inplace=True)
     t = df['reportdate']
-    a = df['totasset']
-    # ca = df['totcurrasset']
+    a = df['totalassets']
+    # ca = df['totalcurrentassets']
     # la = df['totalnoncassets']
     ind = np.arange(len(t))  # the x locations for the groups
     ab=ax.bar(ind, a, width)
@@ -41,8 +41,8 @@ if __name__ == "__main__":
     # width=0.3
     # df2 = dfo[dfo['code']=='SH600000']
     # t2 = df2['reportdate']
-    # a2 = df2['totasset']
-    # ca2 = df2['totcurrasset']
+    # a2 = df2['totalassets']
+    # ca2 = df2['totalcurrentassets']
     # la2 = df2['totalnoncassets']
     # ind2 = np.arange(len(t2))  # the x locations for the groups
     # cab2 = ax2.bar(ind2, ca2, width)
