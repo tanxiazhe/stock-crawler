@@ -22,7 +22,10 @@ def get_bs_for_1_stock(str_stock_code):
         res = {}
         for item in json_list:
             for key in dict(item).keys():
-                res[key.replace('_', '')] = item[key]
+                if isinstance(item[key], list):
+                    res[key.replace('_', '')] = item[key][0]
+                else:
+                    res[key.replace('_', '')] = item[key]
             res_list.append(res)
 
         str_list = json.dumps(res_list)
