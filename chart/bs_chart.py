@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
 # from mpl_toolkits.mplot3d import axes3d
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib import style
 from matplotlib.font_manager import FontProperties
-
+matplotlib.use('tkagg')
+import matplotlib as mpl
+mpl.rcParams['font.sans-serif'] = ['SimHei']
+mpl.rcParams['font.serif'] = ['SimHei']
+mpl.rcParams['axes.unicode_minus'] = False # 解决保存图像是负号'-'显示为方块的问题,或者转换负号为字符串
 
 def draw_bs_bars(ax,position,width,ca,la,cl,ll,e):
     current_asset_bar = ax.bar(position, ca, width, bottom=la, label='current asset')
@@ -192,6 +197,7 @@ def draw_bar(ax,position,series,width,num_bottom,str_label):
 def draw_bs_subplot(ax,df):
     width = 0.1
     t = df['reportdate']
+    rn = df['reportname']
     a = df['totalassets']
     ca = df['totalcurrentassets']
     # curfds = df['curfds']
@@ -242,7 +248,7 @@ def draw_bs_subplot(ax,df):
     # noncasseitse = df['noncasseitse']
     # noncasseform = df['noncasseform']
     #
-    ind = np.arange(len(t))  # the x locations for the groups
+    ind = np.arange(len(rn))  # the x locations for the groups
     #
     # b = df['totliabsharequi']
     cl = df['totalcurrentliab']
@@ -351,7 +357,7 @@ def draw_bs_subplot(ax,df):
     #                           topaycashdivi, curtrandiff, sharrighitse, sharrightform, paresharrigh, minysharrigh,
     #                           righaggritse, rightaggrform)
     ax.set_xticks(ind + width / 2)
-    ax.set_xticklabels(t)
+    ax.set_xticklabels(rn)
     for tick in ax.get_xticklabels():
         tick.set_rotation(90)
     ax.legend(loc='upper right')

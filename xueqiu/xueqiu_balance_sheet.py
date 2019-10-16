@@ -19,8 +19,9 @@ def get_bs_for_1_stock(str_stock_code):
         json_list = json_data['list']
 
         res_list = []
-        res = {}
+
         for item in json_list:
+            res = {}
             for key in dict(item).keys():
                 if isinstance(item[key], list):
                     res[key.replace('_', '')] = item[key][0]
