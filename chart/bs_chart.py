@@ -419,7 +419,7 @@ def draw_industry_bs_chart_for_date(str_industry,str_reportdate):
 
 if __name__ == '__main__':
     # draw_industry_bs_chart_for_date('电子','20171231')
-    draw_is_cfs_chart_for_stock('SH600900')
+    draw_is_cfs_chart_for_stock('SZ000651')
 
 
 
